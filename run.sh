@@ -1,10 +1,17 @@
 #!/bin/bash
 
 show_menu() {
-    echo "===== WHTech 0g ====="
-    echo "1. Fast Install"
-    echo "2. Menu"
-    echo "==============================="
+    echo -e "\033[34m██     ██ ██ ███    ██ ███████ ███    ██ ██ ██████  \033[0m"
+    echo "██     ██ ██ ████   ██ ██      ████   ██ ██ ██   ██ "
+    echo "██  █  ██ ██ ██ ██  ██ ███████ ██ ██  ██ ██ ██████  "
+    echo "██ ███ ██ ██ ██  ██ ██      ██ ██  ██ ██ ██ ██      "
+    echo " ███ ███  ██ ██   ████ ███████ ██   ████ ██ ██      "
+    echo
+    echo "Join our Telegram channel: https://t.me/winsnip"
+    echo
+    echo "> 1. Fast Install (Recommended)"
+    echo "> 2. Manual Menu"
+    echo
 }
 
 show_submenu() {
@@ -17,6 +24,7 @@ show_submenu() {
     echo "> 6. Snapshot Install"
     echo "> 7. Node Run & Show Logs"
     echo "> 8. Exit to Main Menu"
+    echo "> 9. Exit (Ctrl+C)"
     echo "===================================="
 }
 
@@ -176,6 +184,7 @@ while true; do
                     6) snapshot_install ;;
                     7) run_and_show_logs ;;
                     8) break ;;
+                    9) echo "Exiting..."; exit 0 ;;
                     *) echo "Invalid option. Please try again." ;;
                 esac
                 echo ""
