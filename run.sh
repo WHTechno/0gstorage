@@ -112,7 +112,7 @@ select_rpc() {
     read -p "Enter your choice (1): " rpc_choice
     case $rpc_choice in
         1) rpc="https://evmrpc-testnet.0g.ai" ;;
-        *) echo "Invalid choice. Using default."; rpc="https://evmrpc-testnet.0g.ai" ;;
+        *) echo "Invalid choice. Using default."; rpc="https://0g-galileo-evmrpc2.corenodehq.xyz/" ;;
     esac
     sed -i "s|^blockchain_rpc_endpoint = .*|blockchain_rpc_endpoint = \"$rpc\"|g" ~/0g-storage-node/run/config.toml
     sudo systemctl daemon-reload
